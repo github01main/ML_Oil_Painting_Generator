@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <title>무료 유화제작 사이트</title>
+
+    <script>
+        var before_paint = "{% static 'images/base/img23.jpg' %}"
+        var after_paint = "{% static 'images/base/img24.jpg' %}"
+        var transition = "{% static 'images/transition/perlin_noise.png' %}"
+    </script>
+
+    <!--#region main  Scripts Area -->
+
+    <!-- Script reading order 
+        1. three js
+        2. gsap js
+        3. hover-effect js
+        4. app js
+    -->
+
+    <!-- three js 스크립트 -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- gsap js 스크립트 -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {% block extrahead %}
+
+    <!-- hover-effect js script -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script defer src="{% static 'js/hover-effect.umd.js' %}"></script>
+
+    <!-- app js script -->
+
+    <script defer src="{% static 'js/app.js' %}"></script>
+
+    {% endblock %}
+
+    <!--#endregion -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="first-slide sections">
+                    <span>해드림!</span>
+                    <!-- <img src="/" alt="로고" /> -->
+                    <span>유화 제작을 무료로 해드립니다! <strong>(유료 유화제작 별도)</strong></span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="second-slide sections">
+                    <span>이미지를 명화처럼 바꿔드립니다.</span>
+                    <div class="img">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="third-slide sections">
+                    <span>한 번 바꿔보세요!</span>
+                    <div class="file-upload">
+                        <input type="file" id="file">
+                        <button class="btnClick" onclick="save()">Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <section>
+        <div class="example-container">
+            <div class="info">
+                <div class="file-upload">
+                    <input type="file" id="file">
+                    <button class="btnClick" onclick="save()">Generate</button>
+                </div>
+                <h3>Make your own oil paint image.</h3>
+                <br>
+                <p>The Web machine recognize what you want to change to artists painting style and make it your own
+                    images.</p>
+            </div>
+            <div class="img">
+            </div>
+        </div>
+    </section> -->
+</body>
+
+</html>
