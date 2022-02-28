@@ -7,31 +7,31 @@
 }
 
 /* ********************************** 첫번째 페이지 ********************************** */
-.mySwiper .swiper-wrapper .swiper-slide .first-slide {
+.swiper-container .swiper-wrapper .swiper-slide .first-slide {
     width: 100%;
     height: 100vh;
     background-color: #1C1C1C;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .first-slide span {
+.swiper-container .swiper-wrapper .swiper-slide .first-slide span {
     color: #fff;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .first-slide span:first-child  {
+.swiper-container .swiper-wrapper .swiper-slide .first-slide span:first-child  {
     font-size: 9vw;
     font-weight: bold;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .first-slide span:last-child {
+.swiper-container .swiper-wrapper .swiper-slide .first-slide span:last-child {
     font-size: 1vw;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .first-slide span:last-child strong {
+.swiper-container .swiper-wrapper .swiper-slide .first-slide span:last-child strong {
     color: red;
 }
 
 /* ********************************** 두번째 페이지 ********************************** */
-.mySwiper .swiper-wrapper .swiper-slide .second-slide {
+.swiper-container .swiper-wrapper .swiper-slide .second-slide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,58 +40,59 @@
     background-color: #fff;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .second-slide .second-slide-span {
+.swiper-container .swiper-wrapper .swiper-slide .second-slide .second-slide-span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 50px;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .second-slide .second-slide-span span:first-child {
-    font-size: 3vw;
+.swiper-container .swiper-wrapper .swiper-slide .second-slide .second-slide-span span:first-child {
+    font-size: 2vw;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-right: 12px;
+    
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .second-slide span:last-child {
+.swiper-container .swiper-wrapper .swiper-slide .second-slide span:last-child {
     font-size: 1vw;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .second-slide .img {
+.swiper-container .swiper-wrapper .swiper-slide .second-slide .img {
     width: 30vw;
     height : 30vw;
 }
 
 /* ********************************** 세번째 페이지 ********************************** */
-.mySwiper .swiper-wrapper .swiper-slide .third-slide {
+.swiper-container .swiper-wrapper .swiper-slide .third-slide {
     width: 100%;
     height: 100vh;
     background-color: #1C1C1C;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .third-slide span {
-    font-size: 3vw;
+.swiper-container .swiper-wrapper .swiper-slide .third-slide span {
+    font-size: 2vw;
     font-weight: bold;
     color: #fff;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .third-slide p {
+.swiper-container .swiper-wrapper .swiper-slide .third-slide p {
     font-size: 1vw;
     color: #fff;
     margin-bottom: 12px;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .third-slide p strong {
+.swiper-container .swiper-wrapper .swiper-slide .third-slide p strong {
     color: red;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .third-slide .group {
+.swiper-container .swiper-wrapper .swiper-slide .third-slide .group {
     display: flex;
     flex-direction: raw;
     align-items: center;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .third-slide .group .content {
+.swiper-container .swiper-wrapper .swiper-slide .third-slide .group .content {
     outline: 2px dashed #92b0b3 ;
     outline-offset:-10px;  
     text-align: center;
@@ -113,14 +114,14 @@
 }
 
 /* ********************************** 네번째 페이지 ********************************** */
-.mySwiper .swiper-wrapper .swiper-slide .fourth-slide {
+.swiper-container .swiper-wrapper .swiper-slide .fourth-slide {
     width: 100%;
     height: 100vh;
     background-color: #fff;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .fourth-slide span {
-    font-size: 3vw;
+.swiper-container .swiper-wrapper .swiper-slide .fourth-slide span {
+    font-size: 2vw;
     font-weight: bold;
     margin-bottom: 12px;
 }
@@ -130,10 +131,10 @@
     margin-bottom: 12px;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .fourth-slide p {
+.swiper-container .swiper-wrapper .swiper-slide .fourth-slide p {
     font-size: 1vw;
 }
 
-.mySwiper .swiper-wrapper .swiper-slide .fourth-slide p strong {
+.swiper-container .swiper-wrapper .swiper-slide .fourth-slide p strong {
     color: red;
 }

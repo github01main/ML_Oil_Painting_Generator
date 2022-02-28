@@ -6,9 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>무료 유화제작 사이트</title>
 
@@ -17,11 +16,8 @@
         var after_paint = "{% static 'images/base/img24.jpg' %}"
         var transition = "{% static 'images/transition/perlin_noise.png' %}"
     </script>
-    {% comment %} <script defer src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> {% endcomment %}
-    
-    {% comment %} <script>
-        var swiper = new Swiper('.mySwiper', {
+    <script>
+        {% comment %} const swiper = new Swiper('.mySwiper', {
             direction: "vertical",
             sliderPerView: 1,
             spaceBetween: 0,
@@ -29,9 +25,24 @@
             pagination: {
                 el: '.swiper-pagination',
                 type: 'progressbar',
-            }
-        }) 
-    </script> {% endcomment %}
+            },
+
+        }); {% endcomment %}
+        $(document).ready(function() {
+            $(function () {
+                var swiper = new Swiper('.swiper-container', {
+                    direction: "vertical",
+                    sliderPerView: 1,
+                    spaceBetween: 0,
+                    mousewheel: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'progressbar',
+                    },
+                });
+            });
+        });
+    </script>
 
     <!--#region main  Scripts Area -->
 
@@ -71,7 +82,7 @@
 </head>
 
 <body>
-    <div class="swiper mySwiper">
+    <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="first-slide sections">
@@ -122,9 +133,10 @@
             </div>
         </div>
     </div>
+    <div class="swiper-pagination"></div>
     <script src="{% static 'js/file.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-    
+    <!-- <script src="{% static 'js/main.js' %}"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
